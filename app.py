@@ -43,7 +43,7 @@ def handle_message(event):
     elif event.message.text == "image":
         message = ImageSendMessage(
             original_content_url='https://imgur.com/di9CAJV.png',
-            preview_image_url='https://vincent-line-bot2.herokuapp.com/image/line_image.png'
+            preview_image_url='https://vincent-line-bot2.herokuapp.com/callback/image/line_image.png'
         )
     elif event.message.text == "video":
         pass
