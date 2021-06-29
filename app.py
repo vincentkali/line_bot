@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, request, abort
 
 from linebot import (
@@ -34,13 +35,13 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     #message = TextSendMessage(text=event.message.text)
-    if event.message.text == sticker:
+    if event.message.text == "sticker":
         pass
-    elif event.message.text == image:
+    elif event.message.text == "image":
         pass
-    elif event.message.text == video:
+    elif event.message.text == "video":
         pass
-    elif event.message.text == audio:
+    elif event.message.text == "audio":
         pass
     else:
         message = {
