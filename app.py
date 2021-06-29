@@ -50,7 +50,7 @@ def handle_message(event):
     elif event.message.text == "audio":
         pass
     else:
-        message = TextSendMessage(text="You say "+event.message.text)
+        message = TextSendMessage(text="You say "+event.message.text+"\nhttps://www.youtube.com/watch?v=X2lIovmNsUY\nhttps://imgur.com/di9CAJV.png")
     
     line_bot_api.reply_message(event.reply_token, message)
     
