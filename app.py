@@ -46,13 +46,13 @@ def handle_message(event):
             preview_image_url='https://imgur.com/di9CAJV.png'
         )
     elif event.message.text == "video":
-        pass
+        message = TextSendMessage(text="https://www.youtube.com/watch?v=X2lIovmNsUY")
     elif event.message.text == "audio":
         pass
     else:
-        message = TextSendMessage(text="You say "+event.message.text+"\nhttps://www.youtube.com/watch?v=X2lIovmNsUY\nhttps://imgur.com/di9CAJV.png")
+        message = TextSendMessage(text="You say "+event.message.text)
     
-    line_bot_api.reply_message(event.reply_token, message)
+    line_bot_api.reply_message(event.reply_token, [message,message])
     
 import os
 if __name__ == "__main__":
