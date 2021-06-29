@@ -36,7 +36,9 @@ def callback():
 def handle_message(event):
     message = TextSendMessage(text=event.message.text)
     print(message)
+    print(type(message))
     print(event.message.text)
+    print(type(event.message.text))
     line_bot_api.reply_message(event.reply_token, message)
     '''
     if event.message.text == "sticker":
