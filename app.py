@@ -45,8 +45,8 @@ def handle_message(event):
         pass
     else:
         message = {
-            type: "text",
-            text: "You say "+event.message.text
+            "type": "text",
+            "text": "You say "+event.message.text
         }
         line_bot_api.reply_message(event.reply_token, message)
 
