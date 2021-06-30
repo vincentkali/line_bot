@@ -52,14 +52,13 @@ def handle_message(event):
     elif event.message.text == "template":
         pass
     elif event.message.text == "confirm":
-    	pass
-    	'''
+    	    	
     	confirm_template = ConfirmTemplate(text='Do it?', actions=[
             MessageAction(label='Yes', text='Yes!'),
             MessageAction(label='No', text='No!')])
         message = TemplateSendMessage(
             alt_text='Confirm alt text', template=confirm_template)
-        '''
+        
         
     else:
         message = TextSendMessage(text="You say "+event.message.text)
