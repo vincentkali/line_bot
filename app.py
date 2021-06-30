@@ -49,10 +49,12 @@ def handle_message(event):
         message = TextSendMessage(text="https://www.youtube.com/watch?v=X2lIovmNsUY")
     elif event.message.text == "audio":
         pass
+    elif event.message.text == "template":
+        pass
     else:
         message = TextSendMessage(text="You say "+event.message.text)
     
-    line_bot_api.reply_message(event.reply_token, [message,message])
+    line_bot_api.reply_message(event.reply_token, message)
     
 import os
 if __name__ == "__main__":
