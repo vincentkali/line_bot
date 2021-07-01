@@ -28,181 +28,154 @@ LINE_FRIEND = dict(
 )
 
 FLEX_template = {
-  "type": "carousel",
-  "contents": [
-    {
-      "type": "bubble",
-      "hero": {
-        "type": "image",
-        "size": "full",
-        "aspectRatio": "20:13",
-        "aspectMode": "cover",
-        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_5_carousel.png"
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": "uri",
+      "uri": "http://linecorp.com/"
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "Brown Cafe",
+        "weight": "bold",
+        "size": "xl"
       },
-      "body": {
+      {
         "type": "box",
-        "layout": "vertical",
-        "spacing": "sm",
+        "layout": "baseline",
+        "margin": "md",
         "contents": [
           {
-            "type": "text",
-            "text": "Arm Chair, White",
-            "wrap": True,
-            "weight": "bold",
-            "size": "xl"
+            "type": "icon",
+            "size": "sm",
+            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
           },
           {
-            "type": "box",
-            "layout": "baseline",
-            "contents": [
-              {
-                "type": "text",
-                "text": "$49",
-                "wrap": True,
-                "weight": "bold",
-                "size": "xl",
-                "flex": 0
-              },
-              {
-                "type": "text",
-                "text": ".99",
-                "wrap": True,
-                "weight": "bold",
-                "size": "sm",
-                "flex": 0
-              }
-            ]
-          }
-        ]
-      },
-      "footer": {
-        "type": "box",
-        "layout": "vertical",
-        "spacing": "sm",
-        "contents": [
-          {
-            "type": "button",
-            "style": "primary",
-            "action": {
-              "type": "uri",
-              "label": "Add to Cart",
-              "uri": "https://linecorp.com"
-            }
+            "type": "icon",
+            "size": "sm",
+            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
           },
           {
-            "type": "button",
-            "action": {
-              "type": "uri",
-              "label": "Add to wishlist",
-              "uri": "https://linecorp.com"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "type": "bubble",
-      "hero": {
-        "type": "image",
-        "size": "full",
-        "aspectRatio": "20:13",
-        "aspectMode": "cover",
-        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_6_carousel.png"
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "spacing": "sm",
-        "contents": [
-          {
-            "type": "text",
-            "text": "Metal Desk Lamp",
-            "wrap": True,
-            "weight": "bold",
-            "size": "xl"
+            "type": "icon",
+            "size": "sm",
+            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
           },
           {
-            "type": "box",
-            "layout": "baseline",
-            "flex": 1,
-            "contents": [
-              {
-                "type": "text",
-                "text": "$11",
-                "wrap": True,
-                "weight": "bold",
-                "size": "xl",
-                "flex": 0
-              },
-              {
-                "type": "text",
-                "text": ".99",
-                "wrap": True,
-                "weight": "bold",
-                "size": "sm",
-                "flex": 0
-              }
-            ]
+            "type": "icon",
+            "size": "sm",
+            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+          },
+          {
+            "type": "icon",
+            "size": "sm",
+            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
           },
           {
             "type": "text",
-            "text": "Temporarily out of stock",
-            "wrap": True,
-            "size": "xxs",
+            "text": "4.0",
+            "size": "sm",
+            "color": "#999999",
             "margin": "md",
-            "color": "#ff5551",
             "flex": 0
           }
         ]
       },
-      "footer": {
+      {
         "type": "box",
         "layout": "vertical",
+        "margin": "lg",
         "spacing": "sm",
         "contents": [
           {
-            "type": "button",
-            "flex": 2,
-            "style": "primary",
-            "color": "#aaaaaa",
-            "action": {
-              "type": "uri",
-              "label": "Add to Cart",
-              "uri": "https://linecorp.com"
-            }
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "Place",
+                "color": "#aaaaaa",
+                "size": "sm",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "text": "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
+                "wrap": true,
+                "color": "#666666",
+                "size": "sm",
+                "flex": 5
+              }
+            ]
           },
           {
-            "type": "button",
-            "action": {
-              "type": "uri",
-              "label": "Add to wish list",
-              "uri": "https://linecorp.com"
-            }
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "Time",
+                "color": "#aaaaaa",
+                "size": "sm",
+                "flex": 1
+              },
+              {
+                "type": "text",
+                "text": "10:00 - 23:00",
+                "wrap": true,
+                "color": "#666666",
+                "size": "sm",
+                "flex": 5
+              }
+            ]
           }
         ]
       }
-    },
-    {
-      "type": "bubble",
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "spacing": "sm",
-        "contents": [
-          {
-            "type": "button",
-            "flex": 1,
-            "gravity": "center",
-            "action": {
-              "type": "uri",
-              "label": "See more",
-              "uri": "https://linecorp.com"
-            }
-          }
-        ]
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "button",
+        "style": "link",
+        "height": "sm",
+        "action": {
+          "type": "uri",
+          "label": "CALL",
+          "uri": "https://linecorp.com"
+        }
+      },
+      {
+        "type": "button",
+        "style": "link",
+        "height": "sm",
+        "action": {
+          "type": "uri",
+          "label": "WEBSITE",
+          "uri": "https://linecorp.com"
+        }
+      },
+      {
+        "type": "spacer",
+        "size": "sm"
       }
-    }
-  ]
+    ],
+    "flex": 0
+  }
 }
 
 # 監聽所有來自 /callback 的 Post Request
@@ -310,9 +283,9 @@ def handle_message(event):
     else:
         message = TextSendMessage(text="You say "+event.message.text)
     '''
-    
-
-    line_bot_api.reply_message(event.reply_token, json.dumps(FLEX_template))
+    contents['contents']=FLEX_template
+    message=FlexSendMessage(alt_text='title!!!',contents=contents)
+    line_bot_api.reply_message(event.reply_token, message)
     
 import os
 if __name__ == "__main__":
