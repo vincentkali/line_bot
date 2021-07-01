@@ -83,6 +83,12 @@ def handle_message(event):
                             action=LocationAction(label="label6")
                         ),
                     ]))
+    elif event.message.type == "image":
+        if event.message.contentProvider.type == "line":
+            message_content = line_bot_api.get_message_content(event.message.id)
+                with open("./image/image1.png", 'wb') as fd:
+                for chunk in message_content.iter_content():
+                    fd.write(chunk)
         
     else:
         message = TextSendMessage(text="You say "+event.message.text)
