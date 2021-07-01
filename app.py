@@ -111,7 +111,7 @@ FLEX_template = {
               {
                 "type": "text",
                 "text": "Miraina Tower, 4-1-6 Shinjuku, Tokyo",
-                "wrap": true,
+                "wrap": True,
                 "color": "#666666",
                 "size": "sm",
                 "flex": 5
@@ -133,7 +133,7 @@ FLEX_template = {
               {
                 "type": "text",
                 "text": "10:00 - 23:00",
-                "wrap": true,
+                "wrap": True,
                 "color": "#666666",
                 "size": "sm",
                 "flex": 5
