@@ -10,6 +10,8 @@ from linebot.exceptions import (
 from linebot.models import *
 
 import csv
+import os
+import sys
 
 app = Flask(__name__)
 
@@ -107,13 +109,21 @@ def handle_message(event):
         message = TextSendMessage(text='Congrats '+user.display_name)
 
     elif event.message.text.upper() in LINE_FRIEND:
-    	name = event.message.text.upper()
+        name = event.message.text.upper()
         icon = LINE_FRIEND[name]
         message = TextSendMessage(
             text=message,
             sender=Sender(
                 name=name,
                 icon_url=icon))
+    elif event.message.text <= "10" and event.message.text >= "1":
+        number = int(event.message.text)
+        rows_list = []
+        with open(os.path.abspath("maskdata.csv"), newline='') as csvfile:
+            rows = csv.reader(csvfile, delimiter=',')
+            for row in rows:
+                rows_list.append(row)
+        message = TextSendMessage(text=str(rows_list[number]))
         
     else:
         message = TextSendMessage(text="You say "+event.message.text)
