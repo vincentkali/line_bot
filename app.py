@@ -49,7 +49,6 @@ def handle_message(event):
     global LINE_FRIEND
     global FLEX_template
     print(event.message)
-    '''
     if event.message.text == "sticker":
         message = StickerSendMessage(
             package_id='446',
@@ -98,17 +97,6 @@ def handle_message(event):
                             action=LocationAction(label="label6")
                         ),
                     ]))
-    elif event.message.type == "image":
-        print("get image")
-        if event.message.contentProvider.type == "line":
-            message_content = line_bot_api.get_message_content(event.message.id)
-            with open("./image/image1.jpg", 'wb') as fd:
-                for chunk in message_content.iter_content():
-                    fd.write(chunk)
-        url = request.url_root + "/image/image1.jpg"
-        print("request.url_root", request.url_root)
-        app.logger.info("url=" + url)
-        message = ImageSendMessage(url, url)
     elif event.message.text == "profile":
         user = line_bot_api.get_profile(user_id=event.source.user_id)
         message = TextSendMessage(text='Congrats '+user.display_name)
@@ -132,22 +120,7 @@ def handle_message(event):
         
     else:
         message = TextSendMessage(text="You say "+event.message.text)
-    '''
-    message = FlexSendMessage(
-            alt_text='hello',
-            contents={
-                'type': 'bubble',
-                'direction': 'ltr',
-                'hero': {
-                    'type': 'image',
-                    'url': 'https://engineering.linecorp.com/wp-content/uploads/2021/04/%E6%88%AA%E5%9C%96-2021-04-23-%E4%B8%8B%E5%8D%883.00.15.png',
-                    'size': 'full',
-                    'aspectRatio': '100:100',
-                    'aspectMode': 'cover',
-                    'action': {'type': 'uri', 'uri': 'http://example.com', 'label': 'label'}
-                }
-            }
-        )
+    
     line_bot_api.reply_message(event.reply_token, message)
     
 if __name__ == "__main__":
