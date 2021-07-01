@@ -47,7 +47,7 @@ FLEX_template = {
           {
             "type": "text",
             "text": "Arm Chair, White",
-            "wrap": true,
+            "wrap": True,
             "weight": "bold",
             "size": "xl"
           },
