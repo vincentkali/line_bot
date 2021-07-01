@@ -283,6 +283,8 @@ def handle_message(event):
     else:
         message = TextSendMessage(text="You say "+event.message.text)
     '''
+    contents=dict()
+    contents['type']='carousel'
     contents['contents']=FLEX_template
     message=FlexSendMessage(alt_text='title!!!',contents=contents)
     line_bot_api.reply_message(event.reply_token, message)
