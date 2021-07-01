@@ -9,6 +9,8 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
+import csv
+
 app = Flask(__name__)
 
 # Channel Access Token
@@ -105,6 +107,7 @@ def handle_message(event):
         message = TextSendMessage(text='Congrats '+user.display_name)
 
     elif event.message.text.upper() in LINE_FRIEND:
+    	name = event.message.text.upper()
         icon = LINE_FRIEND[name]
         message = TextSendMessage(
             text=message,
