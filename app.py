@@ -283,11 +283,21 @@ def handle_message(event):
     else:
         message = TextSendMessage(text="You say "+event.message.text)
     '''
-    contents=dict()
-    contents['type']='carousel'
-    bubbles=[FLEX_template, FLEX_template]
-    contents['contents']=bubbles
-    message=FlexSendMessage(alt_text='title!!!',contents=contents)
+     message = FlexSendMessage(
+            alt_text='hello',
+            contents={
+                'type': 'bubble',
+                'direction': 'ltr',
+                'hero': {
+                    'type': 'image',
+                    'url': 'https://engineering.linecorp.com/wp-content/uploads/2021/04/%E6%88%AA%E5%9C%96-2021-04-23-%E4%B8%8B%E5%8D%883.00.15.png',
+                    'size': 'full',
+                    'aspectRatio': '100:100',
+                    'aspectMode': 'cover',
+                    'action': {'type': 'uri', 'uri': 'http://example.com', 'label': 'label'}
+                }
+            }
+        )
     line_bot_api.reply_message(event.reply_token, message)
     
 import os
