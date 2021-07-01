@@ -86,9 +86,13 @@ def handle_message(event):
     elif event.message.type == "image":
         if event.message.contentProvider.type == "line":
             message_content = line_bot_api.get_message_content(event.message.id)
-            with open("./image/image1.png", 'wb') as fd:
+            with open("./image/image1.jpg", 'wb') as fd:
                 for chunk in message_content.iter_content():
                     fd.write(chunk)
+        url = request.url_root + "./image/image1.jpg"
+        print("request.url_root", request.url_root)
+        app.logger.info("url=" + url)
+        message = ImageSendMessage(url, url)
         
     else:
         message = TextSendMessage(text="You say "+event.message.text)
