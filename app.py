@@ -84,6 +84,7 @@ def handle_message(event):
                         ),
                     ]))
     elif event.message.type == "image":
+        print("get image")
         if event.message.contentProvider.type == "line":
             message_content = line_bot_api.get_message_content(event.message.id)
             with open("./image/image1.jpg", 'wb') as fd:
