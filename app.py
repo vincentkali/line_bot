@@ -57,6 +57,32 @@ def handle_message(event):
             MessageAction(label='No', text='No!')])
         message = TemplateSendMessage(alt_text='Confirm alt text', template=confirm_template)
         
+    elif event.message.text == "reply":
+        message = TextSendMessage(
+                text='Quick reply',
+                quick_reply=QuickReply(
+                    items=[
+                        QuickReplyButton(
+                            action=PostbackAction(label="label1", data="data1")
+                        ),
+                        QuickReplyButton(
+                            action=MessageAction(label="label2", text="text2")
+                        ),
+                        QuickReplyButton(
+                            action=DatetimePickerAction(label="label3",
+                                                        data="data3",
+                                                        mode="date")
+                        ),
+                        QuickReplyButton(
+                            action=CameraAction(label="label4")
+                        ),
+                        QuickReplyButton(
+                            action=CameraRollAction(label="label5")
+                        ),
+                        QuickReplyButton(
+                            action=LocationAction(label="label6")
+                        ),
+                    ]))
         
     else:
         message = TextSendMessage(text="You say "+event.message.text)
