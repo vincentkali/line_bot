@@ -285,7 +285,8 @@ def handle_message(event):
     '''
     contents=dict()
     contents['type']='carousel'
-    contents['contents']=FLEX_template
+    bubbles=[FLEX_template, FLEX_template]
+    contents['contents']=bubbles
     message=FlexSendMessage(alt_text='title!!!',contents=contents)
     line_bot_api.reply_message(event.reply_token, message)
     
