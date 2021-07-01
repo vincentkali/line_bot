@@ -58,7 +58,7 @@ FLEX_template = {
               {
                 "type": "text",
                 "text": "$49",
-                "wrap": true,
+                "wrap": True,
                 "weight": "bold",
                 "size": "xl",
                 "flex": 0
@@ -66,7 +66,7 @@ FLEX_template = {
               {
                 "type": "text",
                 "text": ".99",
-                "wrap": true,
+                "wrap": True,
                 "weight": "bold",
                 "size": "sm",
                 "flex": 0
@@ -117,7 +117,7 @@ FLEX_template = {
           {
             "type": "text",
             "text": "Metal Desk Lamp",
-            "wrap": true,
+            "wrap": True,
             "weight": "bold",
             "size": "xl"
           },
@@ -129,7 +129,7 @@ FLEX_template = {
               {
                 "type": "text",
                 "text": "$11",
-                "wrap": true,
+                "wrap": True,
                 "weight": "bold",
                 "size": "xl",
                 "flex": 0
@@ -137,7 +137,7 @@ FLEX_template = {
               {
                 "type": "text",
                 "text": ".99",
-                "wrap": true,
+                "wrap": True,
                 "weight": "bold",
                 "size": "sm",
                 "flex": 0
@@ -147,7 +147,7 @@ FLEX_template = {
           {
             "type": "text",
             "text": "Temporarily out of stock",
-            "wrap": true,
+            "wrap": True,
             "size": "xxs",
             "margin": "md",
             "color": "#ff5551",
