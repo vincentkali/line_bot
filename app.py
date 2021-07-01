@@ -89,7 +89,7 @@ def handle_message(event):
             with open("./image/image1.jpg", 'wb') as fd:
                 for chunk in message_content.iter_content():
                     fd.write(chunk)
-        url = request.url_root + "./image/image1.jpg"
+        url = request.url_root + "/image/image1.jpg"
         print("request.url_root", request.url_root)
         app.logger.info("url=" + url)
         message = ImageSendMessage(url, url)
