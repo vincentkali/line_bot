@@ -16,6 +16,12 @@ line_bot_api = LineBotApi('sTcy0mRQtYKW3r3XnlT80MqWC11JpLqQwdaQ6eRkWVGE9AMPhXvtS
 # Channel Secret
 handler = WebhookHandler('e6ca7ad4597415ed5bcd58e01d02e909')
 
+LINE_FRIEND = dict(
+    BROWN="https://stickershop.line-scdn.net/stickershop/v1/sticker/52002734/iPhone/sticker_key@2x.png",
+    CONY="https://stickershop.line-scdn.net/stickershop/v1/sticker/52002735/iPhone/sticker_key@2x.png",
+    SALLY="https://stickershop.line-scdn.net/stickershop/v1/sticker/52002736/iPhone/sticker_key@2x.png"
+)
+
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -97,6 +103,14 @@ def handle_message(event):
     elif event.message.text == "profile":
         user = line_bot_api.get_profile(user_id=event.source.user_id)
         message = TextSendMessage(text='Congrats '+user.display_name)
+
+    elif event.message.text.upper() in LINE_FRIEND:
+        icon = LINE_FRIEND[name]
+        message = TextSendMessage(
+            text=message,
+            sender=Sender(
+                name=name,
+                icon_url=icon))
         
     else:
         message = TextSendMessage(text="You say "+event.message.text)
