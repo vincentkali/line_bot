@@ -47,7 +47,7 @@ FLEX_template = {
           {
             "type": "text",
             "text": "Arm Chair, White",
-            "wrap": True,
+            "wrap": true,
             "weight": "bold",
             "size": "xl"
           },
@@ -58,7 +58,7 @@ FLEX_template = {
               {
                 "type": "text",
                 "text": "$49",
-                "wrap": True,
+                "wrap": true,
                 "weight": "bold",
                 "size": "xl",
                 "flex": 0
@@ -66,7 +66,7 @@ FLEX_template = {
               {
                 "type": "text",
                 "text": ".99",
-                "wrap": True,
+                "wrap": true,
                 "weight": "bold",
                 "size": "sm",
                 "flex": 0
@@ -117,7 +117,7 @@ FLEX_template = {
           {
             "type": "text",
             "text": "Metal Desk Lamp",
-            "wrap": True,
+            "wrap": true,
             "weight": "bold",
             "size": "xl"
           },
@@ -129,7 +129,7 @@ FLEX_template = {
               {
                 "type": "text",
                 "text": "$11",
-                "wrap": True,
+                "wrap": true,
                 "weight": "bold",
                 "size": "xl",
                 "flex": 0
@@ -137,7 +137,7 @@ FLEX_template = {
               {
                 "type": "text",
                 "text": ".99",
-                "wrap": True,
+                "wrap": true,
                 "weight": "bold",
                 "size": "sm",
                 "flex": 0
@@ -147,7 +147,7 @@ FLEX_template = {
           {
             "type": "text",
             "text": "Temporarily out of stock",
-            "wrap": True,
+            "wrap": true,
             "size": "xxs",
             "margin": "md",
             "color": "#ff5551",
@@ -312,7 +312,7 @@ def handle_message(event):
     '''
     
 
-    line_bot_api.reply_message(event.reply_token, json.loads(FLEX_template))
+    line_bot_api.reply_message(event.reply_token, json.dumps(FLEX_template))
     
 import os
 if __name__ == "__main__":
